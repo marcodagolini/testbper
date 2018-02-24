@@ -65,7 +65,7 @@
                 <br>
                 <br>
                 <label for="minutes">Risveglia la conversazione tra </label>
-                <input id = "minutes" name="comments">
+                <input id = "minutes" name="minutes">
 		<label for="minutes"> minuti.</label>
                 <br>
                 <br>
@@ -85,7 +85,11 @@
             	document.getElementById("alert").style = "color : red";
 		var yesno = $('input[name=yesno]:checked').val();
 		var comments = $("#comments").val();
-		console.log("***" + yesno + "***" + comments + "***");
+		var minutes = $("#minutes").val();
+		if (!isNaN(parseFloat(minutes))){
+			console.log("***" + yesno + "***" + comments + "***");
+		}
+		
     
    
 	    
