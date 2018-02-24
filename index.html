@@ -1,17 +1,100 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>LivePerson example page: Full</title>
-    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-    <!-- BEGIN LivePerson Monitor. -->
-    <script type="text/javascript">window.lpTag=window.lpTag||{},"undefined"==typeof window.lpTag._tagCount?(window.lpTag={site:'37544564'||"",section:lpTag.section||"",tagletSection:lpTag.tagletSection||null,autoStart:lpTag.autoStart!==!1,ovr:lpTag.ovr||{},_v:"1.8.0",_tagCount:1,protocol:"https:",events:{bind:function(t,e,i){lpTag.defer(function(){lpTag.events.bind(t,e,i)},0)},trigger:function(t,e,i){lpTag.defer(function(){lpTag.events.trigger(t,e,i)},1)}},defer:function(t,e){0==e?(this._defB=this._defB||[],this._defB.push(t)):1==e?(this._defT=this._defT||[],this._defT.push(t)):(this._defL=this._defL||[],this._defL.push(t))},load:function(t,e,i){var n=this;setTimeout(function(){n._load(t,e,i)},0)},_load:function(t,e,i){var n=t;t||(n=this.protocol+"//"+(this.ovr&&this.ovr.domain?this.ovr.domain:"lptag.liveperson.net")+"/tag/tag.js?site="+this.site);var a=document.createElement("script");a.setAttribute("charset",e?e:"UTF-8"),i&&a.setAttribute("id",i),a.setAttribute("src",n),document.getElementsByTagName("head").item(0).appendChild(a)},init:function(){this._timing=this._timing||{},this._timing.start=(new Date).getTime();var t=this;window.attachEvent?window.attachEvent("onload",function(){t._domReady("domReady")}):(window.addEventListener("DOMContentLoaded",function(){t._domReady("contReady")},!1),window.addEventListener("load",function(){t._domReady("domReady")},!1)),"undefined"==typeof window._lptStop&&this.load()},start:function(){this.autoStart=!0},_domReady:function(t){this.isDom||(this.isDom=!0,this.events.trigger("LPT","DOM_READY",{t:t})),this._timing[t]=(new Date).getTime()},vars:lpTag.vars||[],dbs:lpTag.dbs||[],ctn:lpTag.ctn||[],sdes:lpTag.sdes||[],hooks:lpTag.hooks||[],ev:lpTag.ev||[]},lpTag.init()):window.lpTag._tagCount+=1;</script>
-    <!-- END LivePerson Monitor. -->
-  </head>
-  <body>
+  <style>
+    
+	
+	  
+ 
+	
+	  
+	  
+	  
+   button {
+    background-color: #f68a1f;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 4px;
+    cursor: pointer;
+	  border-radius: 4px;
+	  -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+	  font-family: "Myriad pro","Trebuchet MS","Lucida Grande","Lucida Sans Unicode","Lucida Sans",sans-serif;
+  }
+  button:hover {
+    background-color: #da7009;
+    color: white;	
+  } 
+    
+    
+    
+  </style>
+ 
+ 
+ 
+  
+    
+    <head>
 
-    <a href="javascript:$('#LPwizardtest div').click();void(0)">Serve aiuto?</a>
-    <div id="LPwizardtest" style="visibility:hidden;"></div>
-  </body>
+        <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+
+    
+    </head>
+    <body>
+      
+      
+     
+      
+      
+        <form id="foo" name="foo" > <!-- style="display:block" -->
+               
+                <br>
+  
+                <label for="yesno">TOBi ha compreso la richiesta?</label><br>
+                <input type="radio" name="yesno" value="Si" /> Si<br/>
+		            <input type="radio" name="yesno" value="No" /> No 
+          
+                <br>
+                <br>
+                
+                <textarea id = "comments" name="comments" rows="10" cols="30">Lascia un tuo commento:</textarea>
+                <br>
+                <br>
+                <label for="minutes">Risveglia la conversazione tra minuti: </label>
+                <textarea id = "minutes" name="comments" rows="1" cols="10"></textarea>
+                <br>
+                <br>
+          
+          
+               
+                <button id = "mybutton" type="button" onclick="sendData()">Invio Feedback</button>
+                <div id="alert"></div>
+                <br>
+                <br>
+                
+            </form>
+    <script>
+      
+	function sendData() {
+		document.getElementById("alert").innerHTML = "...invio dati...";
+            	document.getElementById("alert").style = "color : red";
+		var yesno = $('input[name=yesno]:checked').val();
+		var comments = $("#comments").val();
+		console.log("***" + yesno + "***" + comments + "***");
+    
+   
+	    
+	    
+	    
+      
+    </script>
+  
+        
+          
+      
+    </body>
 </html>
