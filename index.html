@@ -84,8 +84,13 @@
 		var comments = $("#comments").val();
 		var minutes = $("#minutes").val();
 		if (!isNaN(parseFloat(minutes))){
-			console.log("***" + yesno + "***" + comments + "***");
+			minutes = parsefloat(minutes);
 		}
+		else{
+			minutes = "";
+		}
+		
+		console.log("***" + yesno + "***" + comments + "***" + minutes + "***");
 	}
 		
     
